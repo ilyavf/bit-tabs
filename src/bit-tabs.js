@@ -1,11 +1,11 @@
-import can from "can";
-import stache from "can/view/stache/";
-import util from "./util";
-import tabsStache from "./tabs.stache!";
-import panelStache from "./panel.stache!";
-import "./tabs.less!";
+var can = require("can");
+var stache = require("can/view/stache/");
+var util = require("./util");
+var tabsStache = require("./tabs.stache!");
+var panelStache = require("./panel.stache!");
+require("./tabs.less!");
 
-export var BitPanelVM = can.Map.extend({
+var BitPanelVM = can.Map.extend({
 	active: false
 });
 
@@ -23,7 +23,7 @@ can.Component.extend({
 	}
 });
 
-export var BitTabsVM = can.Map.extend({
+var BitTabsVM = can.Map.extend({
 	// Contains a list of all panel scopes within the
 	// tabs element.
 	panels: [],
@@ -69,7 +69,7 @@ export var BitTabsVM = can.Map.extend({
 	}
 });
 
-can.Component.extend({
+module.exports = can.Component.extend({
 	tag: "bit-tabs",
 	template: tabsStache,
 	scope: BitTabsVM

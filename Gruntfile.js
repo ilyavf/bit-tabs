@@ -33,10 +33,7 @@ module.exports = function (grunt) {
 					sourceMaps: true
 				},
 				outputs: {
-					"+cjs": {},
-					"+amd": {},
-					"+global-js": {},
-					"+global-css": {}
+					"+cjs": {}
 				}
 			}
 		}
